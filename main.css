@@ -51,13 +51,13 @@ h3 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 p {
   color: white;
   text-align: left;
-  font-size: 25px;
+  font-size: 30px;
   margin-left: 50px;
   font-weight: normal;
   font-family: 'Tahoma';
@@ -65,8 +65,8 @@ p {
 
 body {
   background-color: black;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .center {
