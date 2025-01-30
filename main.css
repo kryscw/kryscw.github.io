@@ -1,0 +1,56 @@
+header {
+  background-color: rgb(11, 112, 0, 0.6);
+  background-blend-mode: lighten;
+  margin-bottom: 20px;
+  background-image: url('images/city_bg.png');
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding: 16px;
+  text-decoration: none;
+  font-family: 'Courier New';
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+
+p {
+  color: white;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+body {
+  background-color: black;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#someid { color: green; }
+
+#marginpush {
+  margin-top: 50px;
+}
+
+#titleimg { 
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
