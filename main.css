@@ -22,8 +22,18 @@ li a {
   text-align: center;
   font-size: 25px;
   padding:20px;
+  margin-right: 10px;
+  margin-left: 10px;
   text-decoration: none;
   font-family: 'Courier New';
+}
+
+.selected {
+  background-color: #111111;
+}
+
+.selected:hover {
+  background-color: #111111;
 }
 
 li a:hover {
