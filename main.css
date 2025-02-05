@@ -30,13 +30,46 @@ li a:hover {
   background-color: #111111;
 }
 
-img {
+.title_img {
   opacity: 1;
+  width: 300px;
+  transition: width 0.3s;
+  transition-timing-function: ease;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-img:hover {
-  opacity: 0.9;
+.page_title_img {
+  opacity: 1;
+  width: 200px;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
 }
+
+.title_img:hover {
+  opacity: 0.9;
+  width: 310px;
+}
+
+.page_title_img:hover {
+  opacity: 0.4;
+}
+
+.social {
+  width: 100px;
+  padding: 50px;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
+}
+
+.social:hover {
+  opacity: 0.4;
+}
+
+
+
+
+
 
 h1, h2 {
   color: white;
@@ -93,11 +126,6 @@ body {
   margin:auto;
   text-align: center;
   background-color: #1a1a1a;
-}
-
-#titleimg { 
-  margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 #more {
