@@ -49,6 +49,17 @@ li a:hover {
   margin-bottom: 10px;
 }
 
+.post_img {
+  width: 30%;
+  transition: width 0.3s;
+  transition-timing-function: ease;
+}
+
+.post_img:hover {
+  width: 50%;
+  box-shadow: 0px 0px 5px #fff;
+}
+
 .page_title_img {
   opacity: 1;
   width: 200px;
@@ -101,7 +112,8 @@ p {
   color: white;
   text-align: left;
   font-size: 25px;
-  padding: 10px;
+  
+  padding: 5px;
   font-weight: normal;
   font-family: 'Tahoma';
 }
