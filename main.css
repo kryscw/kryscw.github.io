@@ -98,25 +98,7 @@ p {
   font-family: 'Courier New';
   margin-left: 5%;
   margin-right: 5%;
-}
-
-@media only screen 
-and (min-width : 300px)
-and (max-width : 500px) {
-   .image_caption {
-    font-size: 20px;
-    text-align: center;
-   }
-}
-
-@media only screen 
-and (min-width : 500px)
-and (max-width : 1000px) {
-
-    .image_caption {
-    font-size: 30px;
-    text-align: center;
-    }
+  font-size: 150%;
 }
 
 body {
@@ -168,7 +150,8 @@ body {
 
 .social {
   width: 100px;
-  padding: 50px;
+  margin-top:50px;
+  padding: 30px;
   transition: opacity 0.3s;
   transition-timing-function: ease;
 }
