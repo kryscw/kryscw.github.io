@@ -1,7 +1,23 @@
+/* Page Basics */
+
+/*  @keyframes moving {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-300px)
+  }
+} */
+
 header {
-  background-color: rgb(11, 112, 0, 0.6);
-  background-blend-mode: lighten;
+  /* background-color: rgb(11, 112, 0, 0.6); */
+  background-color: darkgreen;
+  /* background-blend-mode: lighten; */
   margin-bottom: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  /* animation: moving 30s linear infinite; */
+  background-position-x: center;
   background-image: url('images/city_bg.png');
 }
 
@@ -26,6 +42,14 @@ li a {
   margin-left: 10px;
   text-decoration: none;
   font-family: 'Courier New';
+  transition: background-color 0.25s;
+  transition-timing-function: ease;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .selected {
@@ -37,60 +61,11 @@ li a {
 }
 
 li a:hover {
+ 
   background-color: #111111;
-}
-
-.title_img {
-  opacity: 1;
-  width: 300px;
-  transition: width 0.3s;
-  transition-timing-function: ease;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.post_img {
-  width: 30%;
-  transition: width 0.3s;
+  transition: background-color 0.25s;
   transition-timing-function: ease;
 }
-
-.post_img:hover {
-  width: 50%;
-  box-shadow: 0px 0px 5px #fff;
-}
-
-.page_title_img {
-  opacity: 1;
-  width: 200px;
-  transition: opacity 0.3s;
-  transition-timing-function: ease;
-}
-
-.title_img:hover {
-  opacity: 0.9;
-  width: 310px;
-}
-
-.page_title_img:hover {
-  opacity: 0.4;
-}
-
-.social {
-  width: 100px;
-  padding: 50px;
-  transition: opacity 0.3s;
-  transition-timing-function: ease;
-}
-
-.social:hover {
-  opacity: 0.4;
-}
-
-
-
-
-
 
 h1, h2 {
   color: white;
@@ -118,14 +93,114 @@ p {
   font-family: 'Tahoma';
 }
 
+.image_caption {
+  text-align: center;
+  font-family: 'Courier New';
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media only screen 
+and (min-width : 300px)
+and (max-width : 500px) {
+   .image_caption {
+    font-size: 20px;
+    text-align: center;
+   }
+}
+
+@media only screen 
+and (min-width : 500px)
+and (max-width : 1000px) {
+
+    .image_caption {
+    font-size: 30px;
+    text-align: center;
+    }
+}
+
 body {
   background-color: black;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.center {
+.linkbrowser {
+  margin:auto;
   text-align: center;
+  background-color: #1a1a1a;
+}
+
+#more {
+  display: none;
+}
+
+/* Images */
+
+.title_img {
+  opacity: 1;
+  width: 300px;
+  transition: width 0.3s;
+  transition-timing-function: ease;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.page_title_img {
+  opacity: 1;
+  width: 200px;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
+}
+
+.title_img:hover {
+  opacity: 0.9;
+  width: 310px;
+}
+
+.page_title_img:hover {
+  opacity: 0.4;
+}
+
+
+
+/* Specifics */
+
+.social {
+  width: 100px;
+  padding: 50px;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
+}
+
+.social:hover {
+  opacity: 0.4;
+}
+
+.link {
+  text-decoration: none;
+  outline-color: transparent;
+  color: lightblue;
+}
+
+.link:visited {
+  color: lightblue;
+}
+
+.game_image {
+  object-fit: cover;
+  overflow: hidden;
+  width: 70%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.game_title {
+  object-fit: cover;
+  overflow: hidden;
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .post {
@@ -139,17 +214,22 @@ body {
   transition-timing-function: ease;
 }
 
+.game_post {
+  margin:auto;
+  text-align: center;
+  
+  width: 50vh;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  transition-timing-function: ease;
+}
+
 .post:hover {
   background-color: #0d0d0d;
   border: 3px solid #0d0d0d;
 }
 
-.linkbrowser {
-  margin:auto;
-  text-align: center;
-  background-color: #1a1a1a;
-}
 
-#more {
-  display: none;
+.center {
+  text-align: center;
 }

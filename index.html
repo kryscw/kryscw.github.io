@@ -11,7 +11,7 @@
 
 <body>
 	<header>
-		<a href="./"><center><img src="images/kryscw.png" alt="" class = "title_img"></center></a>
+		<a href="./"><div class="wrapper"><img src="images/kryscw.png" alt="" class = "title_img"></div></a>
 	</header>
 
 
@@ -20,59 +20,40 @@
 	<header>
 		<div class="linkbrowser">
 			<ul>
-			  <li><a class="selected" href="./">Blog</a></li>
-			  <li><a href="downloads">Downloads</a></li>
-			  <li><a href="about">About</a></li>
+			  <li><a class="selected" href="./">About</a></li>
+			  <li><a href="projects.html">Projects</a></li>
 			</ul>
 		</div>
 	</header>
 
 	<!-- PAGE DATA BELOW -->
 
-	<hr>
+	
 
-	<center><img class="page_title_img" src="images/blog.png"/></center>
+	<div class="post">
 
-	<h3 class="center">2025</h3>
+		<p class="center">Hello! I'm <strong>kryscw</strong>, a game developer that works in the <strong>Godot Engine.</strong></p>
 
-	<div class="post" style="margin-bottom: 50px;">
+		<p class="center">I've been developing my own tiny projects for around a year now, and have made things that I'm proud of.</p>
 
-		<h2>Hello!</h2>
-
-		<p>Welcome to my webpage! I'm still getting everything set up. Here I'll post updates about my games, or whatever I feel like sharing.</p>
+		<p class="center">I do all the coding, art, music, and 3D models for my projects by myself.</p>
 		
-		<p>I wrote the HTML and CSS myself, so just disregard if anything looks off. That's (more than likely) on me.</p>
+		<p class="center">Most promotional art is done by my awesome friend who is very talented: <a class="link" target="_blank" href="https://bsky.app/profile/cassetteology.bsky.social">Cassetteology</a></p>
 
-		<p>P.S.: If you're having issues with CSS and you've visited my site before, clear your web cache. (Github Pages is weird sometimes)</p>
-		
-		<h3 id="datemarker">01.29.25</h3>
+		<p class="center">Click the links below to find me elsewhere!</p>
+
 	</div>
-	 
-	<!-- Read more button function (for later blog posts)
+	<div class="wrapper">
+		<div>
 
-	<span id="dots">...</span></p>
-	<span id="more">
-	</span>
-	<button onclick="readButton()" id="readBtn">Read more</button>
+			<a href="https://bsky.app/profile/kryscw.bsky.social" target="_blank"><img class="social" src="images/social/bsky.png"/></a>
 
-	 <script>
-	 	function readButton() {
-	 		var dots = document.getElementById("dots");
-	 		var moreText = document.getElementById("more");
-	 		var btnText = document.getElementById("readBtn")
+			<a href="https://kryscw.itch.io/" target="_blank"><img class="social" src="images/social/itch.png"/></a>
 
-	 		if (dots.style.display === "none") {
-				dots.style.display = "inline";
-				btnText.innerHTML = "Read more"; 
-				moreText.style.display = "none";
-			} else {
-				dots.style.display = "none";
-				btnText.innerHTML = "Read less"; 
-				moreText.style.display = "inline";
-			}
-	 	}
-	 </script>
+			<a href="https://www.reddit.com/user/kryscw/" target="_blank"><img class="social" src="images/social/reddit.png"/></a>
 
-	-->
+		</div>
+	</div>
+
 </body>
 </html>
