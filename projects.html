@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=0.75" />
-	<link type="text/css" rel="stylesheet" href="main.css?id=55355"/>
+	<link type="text/css" rel="stylesheet" href="main.css?id=6968"/>
 	<title>kryscw</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 	<meta name="description" content="im a game dev">
@@ -15,7 +15,7 @@
 	</header>
 
 	<!-- LINK BROWSER -->
-
+	<div class="sticky_navbar">
 	<header>
 		<div class="linkbrowser">
 			<ul>
@@ -24,6 +24,7 @@
 			</ul>
 		</div>
 	</header>
+	</div>
 
 	<!-- PAGE DATA BELOW -->
 
@@ -34,10 +35,11 @@
 			<img class="game_title" src="images/games/bitCita.png"/>
 		</a>
 		<a class="link" target="_blank" href="https://kryscw.itch.io/bit-city-uprising">
-			<img class="game_image" style="border: 1px white solid;" src="images/games/bitcity.png"/> <figcaption>Click image to visit.</figcaption>
+			<img id="btc" class="game_image" style="border: 1px white solid;" src="images/games/bitcity.png" onmouseover="chng(1, this, 'bitcity')" onmouseout="chng(2, this, 'bitcity')">
+			<figcaption>Click image to visit.</figcaption>
 		</a>
 		<p class="image_caption">Inspired by ULTRAKILL, play as a Robot named Echo looking to take down the oppressive Bit City. (Thanks to <a class="link" target="_blank" href="https://bsky.app/profile/cassetteology.bsky.social">Cassetteology</a> for the itch.io banner)</p>
-
+		<h5>Creation Date: June 14 2024</h5>
 	</div>
 
 	<div style="background-color: black;" class="game_post">
@@ -46,10 +48,10 @@
 			<img style="image-rendering: pixelated;" class="game_title" src="images/games/picturlogo.png"/>
 		</a>
 		<a class="link" target="_blank" href="https://kryscw.itch.io/picturesque">
-			<img class="game_image" style="border: 1px white solid;" src="images/games/picturesque.png"/> <figcaption>Click image to visit.</figcaption>
+			<img class="game_image" style="border: 1px white solid;" src="images/games/picturesque.png" onmouseover="chng(1, this, 'picturesque')" onmouseout="chng(2, this, 'picturesque')"/> <figcaption>Click image to visit.</figcaption>
 		</a>
 		<p class="image_caption">Made for the Godot Wild Jam #72: a puzzle platformer where you can take photos to see through your foggy surroundings.</p>
-
+		<h5>Creation Date: August 18 2024</h5>
 	</div>
 
 	<div style="background-color: #4E64EC;" class="game_post">
@@ -58,40 +60,38 @@
 			<img style="image-rendering: pixelated;" class="game_title" src="images/games/icebreaker_like_trees.png"/>
 		</a>
 		<a class="link" target="_blank" href="https://kryscw.itch.io/icebreaker">
-			<img class="game_image" style="border: 1px white solid;" src="images/games/icebreaker.png"/> <figcaption>Click image to visit.</figcaption>
+			<img class="game_image" style="border: 1px white solid;" src="images/games/icebreaker.png" onmouseover="chng(1, this, 'icebreaker')" onmouseout="chng(2, this, 'icebreaker')"/> <figcaption>Click image to visit.</figcaption>
 		</a>
 		<p class="image_caption">Made hastily for the Godot Wild Jam #76: an FPS game where you can freeze enemies and kick/punch them. (Thanks to <a target = "_blank" class="link" href="https://bsky.app/profile/mash1.bsky.social">TSR/Mash</a> for the logo.)</p>
-
+		<h5>Creation Date: December 23 2024</h5>
 	</div>
 
 	<div style="background-color: black;" class="game_post">
-
 		<a class="link" target="_blank" href="https://kryscw.itch.io/nightrider">
 			<img class="game_title" src="images/games/nightridre_logo.png"/>
 		</a>
 		<a class="link" target="_blank" href="https://kryscw.itch.io/nightrider">
-			<img class="game_image" style="border: 1px white solid;" src="images/games/nightrider.png"/> <figcaption>Click image to visit.</figcaption>
+			<img class="game_image" style="border: 1px white solid;" src="images/games/nightrider.png" onmouseover="chng(1, this, 'nightrider')" onmouseout="chng(2, this, 'nightrider')"/> <figcaption>Click image to visit.</figcaption>
 		</a>
+		
 		<p class="image_caption">Mostly a test game, but you can play as a car and deliver packages.</p>
 
+		<h5>Creation Date: June 27 2024</h5>
 	</div>
 	</div>
-	
-	<!--
-	All downloads will be via MediaFire.
-	<table>
-		<tr>
-			<td>
-				<div>
-					<img src="images/.png" id="gameicon">
-					<p></p>
-					<h5 style="text-align: left;"></h5>
-					<h5 style="text-align: left;">Created on</h5>
-					<a href=""><img style="float: left; width:200px;" src="images/downloadbutton.png"></a>
-				</div>
-			</td>
-		</tr>
-	</table>
-	-->
+
+	<script>
+		function chng(x, image, game)
+		{
+			if (x==1)
+			{
+				image.src = 'images/games/gifs/' + game + '.gif';
+			}
+			if (x==2)
+			{
+				image.src = 'images/games/' + game + '.png';
+			}
+		}
+	</script>
 </body>
 </html>
