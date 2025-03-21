@@ -239,3 +239,68 @@ body {
 .center {
   text-align: center;
 }
+
+/* Terminal */
+
+.terminalCont {
+  background: black;
+  width: 100%;
+  border-radius: 90px;
+  padding: 12px 0 0 0;
+  font-family: 'Courier New', monospace;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terminalCont p {
+  font-family: 'Courier New', monospace;
+  padding: 5px 0 0 0;
+  margin-top: -10px;
+}
+
+.userEnteredText{
+  color: rgb(255, 255, 255, 0.5);
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline-block;
+}
+
+#terminalResultsCont {
+  width: 100%;
+  height: 400px;
+  padding: 12px;
+  padding-top: 50px;
+  overflow-y: auto;
+  resize: none;
+  border: none;
+  line-height: 18px;
+  font-size: 25px;
+  display: block;
+  color: rgb(255, 255, 255, 0.9);
+}
+
+#terminalResultsCont a{
+  color: rgb(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
+#terminalTextInput {
+  background: black;
+  display: block;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  outline: none;
+  font-family: 'Courier New', monospace;
+}
+
+@media screen and (max-width: 1000px) {
+  #terminalResultCont {
+    height: 100px;
+  }
+}

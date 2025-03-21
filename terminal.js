@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scroll();
 
     var addText = function(textToAdd) {
-        document.getElementById('terminalResultsCont').innerHTML += "<p>" + textToAdd + "</p>";
+        document.getElementById('terminalResultsCont').innerHTML += textToAdd + "</p>";
         scroll();
     };
 
