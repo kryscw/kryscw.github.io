@@ -1,0 +1,133 @@
+/* Page Basics */
+
+header {
+  background-color: darkgreen;
+  margin-bottom: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-position-x: center;
+  background-image: url('images/city_bg.png');
+}
+
+.sticky_navbar {
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding:3px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Courier New';
+  transition: background-color 0.25s;
+  transition-timing-function: ease;
+}
+
+.selected {
+  background-color: #111111;
+}
+
+.selected:hover {
+  background-color: #111111;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li a:hover {
+ 
+  background-color: #111111;
+  transition: background-color 0.25s;
+  transition-timing-function: ease;
+}
+
+body {
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.linkbrowser {
+  margin:auto;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+/* Terminal */
+
+.terminalCont {
+  background: black;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px 0 0 0;
+  margin-top:-20px;
+  font-family: 'Courier New', monospace;
+  opacity: 100;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userEnteredText{
+  color: rgb(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+#terminalResultsCont {
+  width: 100%;
+  height: 400px;
+  padding: 12px;
+  overflow-y: auto;
+  resize: none;
+  border: none;
+  line-height: 18px;
+  font-size: 25px;
+  display: block;
+  color: rgb(255, 255, 255, 0.9);
+}
+
+#terminalResultsCont a{
+  color: rgb(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
+#terminalTextInput {
+  background: black;
+  display: block;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  outline: none;
+  font-family: 'Courier New', monospace;
+}
+
+@media screen and (max-width: 1000px) {
+  #terminalResultCont {
+    height: 100px;
+  }
+}

@@ -108,7 +108,7 @@ h5 {
 
 .image_caption {
   text-align: center;
-  font-family: 'Courier New';
+  font-family: 'Courier New', monospace;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: auto;
