@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         termDiv.scrollTop = termDiv.scrollHeight;
     };
 
+    var painAudio = new Audio('sounds/hl2_00.mp3');
+
     scroll();
 
     var addText = function(textToAdd) {
@@ -92,6 +94,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
             case "pengy":
                 addText("")
+                break;
+            case "innsbruck":
+                addText("..")
+                painAudio.play();
+                break;
             default:
                 addText("Bad command or filename")
                 break;
