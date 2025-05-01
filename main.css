@@ -24,6 +24,7 @@ header {
 .sticky_navbar {
   position: sticky;
   top: 0;
+  margin-bottom: 25px;
   background-color: black;
 }
 
@@ -174,7 +175,6 @@ body {
 
 .social {
   width: 100px;
-  margin-top:50px;
   padding: 20px;
   transition: opacity 0.3s;
   transition-timing-function: ease;
@@ -222,12 +222,26 @@ body {
 }
 
 .game_post {
+  border-radius: 25px;
   align-self: stretch;
   text-align: center;
   display: flex;
   flex-direction: column;
   width: 50vh;
   margin-bottom: 20px;
+  margin-left:10px;
+  margin-right:10px;
+  top: 0px;
+  border: none;
+}
+
+.game_post:hover {
+  position: relative;
+  top: -5px;
+  border: 1px solid white;
+  transition: border 0.2s;
+  transition: top 0.2s;
+  transition-timing-function: ease;
 }
 
 .post:hover {

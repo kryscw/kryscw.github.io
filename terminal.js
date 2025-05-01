@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         termDiv.scrollTop = termDiv.scrollHeight;
     };
 
-    var painAudio = new Audio('sounds/hl2_00.mp3');
-
     scroll();
 
     var addText = function(textToAdd) {
@@ -54,14 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var reqInfo = function (info) {
-        if (info == "pengy") {
-                addText("Mayor of Bit City. Has faced plenty of backlash<br><br> from U.S. courts, but persists.");
-        } else if (info == "echo" || info == "foxtrot" || info == "delta") {
+        if (info == "echo" || info == "foxtrot" || info == "delta") {
                 addText("AFR-4790 machine built with dubious morality to fulfill the purpose<br><br>of robotic takeover. Often prone to corruption.")
         } else if (info == "rifle" || info == "boomgun" || info == "sten") {
                 addText("Weapons created for AFR-4790s to handle. Upon their deactivation,<br><br> their weapons were scattered among the city.");
         } else {
-                addText("Usage: request (pengy, echo/foxtrot/delta, rifle/boomgun/sten, etc.)");
+                addText("Usage: request (echo/foxtrot/delta, rifle/boomgun/sten, etc.)");
         }
     }
 
@@ -92,13 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
             case "calltrain north_sector":
                 addText("Calling train bound to NORTH SECTOR...");
                 break;
-            case "pengy":
-                addText("")
-                break;
-            case "innsbruck":
-                addText("..")
-                painAudio.play();
-                break;
             default:
                 addText("Bad command or filename")
                 break;
@@ -110,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         txtLower = txtInput.toLowerCase();
 
         if (txtInput != "") {
-            addText("<p class='userEnteredText'>kryscw> " + txtInput + "</p>");
+            addText("<p class='userEnteredText'>> " + txtInput + "</p>");
             if (txtInput.includes("checkstatus")) {
                 checkStatus(txtInput.replace('checkstatus ', ''));
             } else if (txtInput.includes("clear")) {
