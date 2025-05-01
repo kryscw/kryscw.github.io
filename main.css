@@ -174,6 +174,7 @@ body {
 /* Specifics */
 
 .social {
+  animation: 0.5s initialize;
   width: 100px;
   padding: 20px;
   transition: opacity 0.3s;
@@ -211,6 +212,7 @@ body {
 }
 
 .post {
+  animation: 0.5s initialize;
   background-color: #1a1a1a;
   border: 3px solid #1a1a1a;
   margin:auto;
@@ -222,31 +224,41 @@ body {
 }
 
 .game_post {
-  border-radius: 25px;
+  animation: 0.5s initialize;
   align-self: stretch;
   text-align: center;
   display: flex;
   flex-direction: column;
   width: 50vh;
-  margin-bottom: 20px;
-  margin-left:10px;
-  margin-right:10px;
-  top: 0px;
-  border: none;
+  margin: 30px;
+  scale: 100%;
+  border-radius: 25px;
+  border: 1px solid transparent;
 }
 
 .game_post:hover {
-  position: relative;
-  top: -5px;
-  border: 1px solid white;
-  transition: border 0.2s;
-  transition: top 0.2s;
+  /*position: relative;
+  top: -5px;*/
+  scale: 105%;
+  border: 1px solid #d0d0d0;
+  transition: scale 0.2s;
   transition-timing-function: ease;
 }
 
 .post:hover {
   background-color: #0d0d0d;
   border: 3px solid #0d0d0d;
+}
+
+@keyframes initialize {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 
@@ -256,10 +268,12 @@ body {
 
 /* Terminal */
 
-.terminalCont {
+.terminal {
+  animation: 0.5s initialize;
   background: black;
+  border: 1px white solid;
   width: 100%;
-  border-radius: 90px;
+  border-radius: 5px;
   padding: 12px 0 0 0;
   font-family: 'Courier New', monospace;
   max-width: fit-content;
@@ -267,7 +281,7 @@ body {
   margin-right: auto;
 }
 
-.terminalCont p {
+.terminal p {
   font-family: 'Courier New', monospace;
   padding: 5px 0 0 0;
   margin-top: -10px;
@@ -281,11 +295,11 @@ body {
   display: inline-block;
 }
 
-#terminalResultsCont {
+#terminalResults {
   width: 100%;
   height: 400px;
   padding: 12px;
-  padding-top: 50px;
+  
   overflow-y: auto;
   resize: none;
   border: none;
@@ -295,7 +309,7 @@ body {
   color: rgb(255, 255, 255, 0.9);
 }
 
-#terminalResultsCont a{
+#terminalResults a{
   color: rgb(255, 255, 255, 0.9);
   text-decoration: underline;
 }
@@ -305,7 +319,7 @@ body {
   display: block;
   border: none;
   border-radius: 0 0 4px 4px;
-  width: 100%;
+  width: 96%;
   color: white;
   padding: 18px;
   font-size: 25px;
@@ -314,7 +328,7 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  #terminalResultCont {
+  #terminalResults {
     height: 100px;
   }
 }
