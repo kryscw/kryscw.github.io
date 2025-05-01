@@ -18,7 +18,7 @@ header {
   margin-right: 2%;
   /* animation: moving 30s linear infinite; */
   background-position-x: center;
-  background-image: url('images/city_bg.png');
+  background-image: url('images/site_bg.png');
 }
 
 .sticky_navbar {
