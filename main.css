@@ -1,29 +1,20 @@
 /* Page Basics */
 
-/*  @keyframes moving {
-  from {
-    transform: translateX(0)
-  }
-  to {
-    transform: translateX(-300px)
-  }
-} */
-
-header {
-  /* background-color: rgb(11, 112, 0, 0.6); */
+#header {
   background-color: darkgreen;
-  /* background-blend-mode: lighten; */
   margin-bottom: 20px;
   margin-left: 2%;
   margin-right: 2%;
-  /* animation: moving 30s linear infinite; */
   background-position-x: center;
+  background-image: url('images/site_bg.png');
 }
 
 .sticky_navbar {
   position: sticky;
   top: 0;
   margin-bottom: 25px;
+  margin-left: 2%;
+  margin-right: 2%;
   background-color: black;
 }
 
