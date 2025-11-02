@@ -11,6 +11,7 @@
 
 .sticky_navbar {
   position: sticky;
+  overflow: hidden;
   top: 0;
   margin-bottom: 25px;
   margin-left: 2%;
@@ -123,9 +124,9 @@ body {
 }
 
 .linkbrowser {
-  margin:auto;
   text-align: center;
   background-color: #1a1a1a;
+  
 }
 
 #more {
@@ -136,11 +137,9 @@ body {
 
 .title_img {
   opacity: 1;
-  width: 300px;
+  width: 200px;
   transition: width 0.3s;
   transition-timing-function: ease;
-  margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 .page_title_img {
@@ -152,7 +151,7 @@ body {
 
 .title_img:hover {
   opacity: 0.9;
-  width: 310px;
+  width: 225px;
 }
 
 .page_title_img:hover {
@@ -164,7 +163,7 @@ body {
 /* Specifics */
 
 .social {
-  animation: 0.5s initialize;
+  /animation: 0.5s initialize;
   width: 100px;
   padding: 20px;
   transition: opacity 0.3s;
@@ -240,7 +239,7 @@ body {
   border: 3px solid #0d0d0d;
 }
 
-@keyframes initialize {
+/*@keyframes initialize {
   0% {
     transform: translateY(10%);
     opacity: 0;
@@ -250,7 +249,7 @@ body {
     opacity: 1;
   }
 }
-
+*/
 
 .center {
   text-align: center;
