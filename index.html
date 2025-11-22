@@ -11,14 +11,16 @@
 
 <body>
 
+	<div id="intro"/>
+
 	<!-- LINK BROWSER -->
 	<div class="sticky_navbar">
 		<header style ="background-image: url('images/sitebg.png');">
 			<a href="./"><div class="wrapper"><img src="images/krys_logo.png" class="title_img"></div></a>
 			<div class="linkbrowser">
 				<ul style="border-top: 20px black solid;">
-					<li><a class="selected" href="./" >About</a></li>
-					<li><a href="projects">Projects</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/@kryscw">YouTube</a></li>
+					<li><a target="_blank" href="https://kryscw.itch.io/">Itch</a></li>
 				</ul>
 			</div>
 		</header>
@@ -26,19 +28,20 @@
 
 	<!-- PAGE DATA BELOW -->
 
-	
 
-	<div class="post">
+	<div id="skills" class="post">
 
 		<h1>Intro</h1>
 
-		<h3>Last Updated: October 10 2025</h3>
+		<h3>Last Updated: November 22 2025</h3>
 
-		<p class="center">Hello! I'm <strong>kryscw</strong>, a hobbyist game developer that works in the <strong>Godot Engine.</strong></p>
+		<p class="center">Hello! I'm <strong>kryscw</strong>, a game developer that works in the <strong>Godot Engine.</strong></p>
+
+		<p class="center">My hobbies include music, 3D art, and making games. I also like to collect old electronics and televisions.</p>
 
 	</div>
 
-	<p></p>
+	<p/>
 
 	<div class="post">
 
@@ -50,15 +53,109 @@
 
 	</div>
 
-	<p></p>
+	<p id="projects" ></p>
 
-	<div class="wrapper">
-		<div>
+<hr>
+	<div class="post">
+	<h1>Projects</h1>
+	</div>
 
-			<a href="https://kryscw.itch.io/" target="_blank"><img class="social" src="images/social/itch.png"/></a>
+	
+	
+	<div class="flex">
+		<div style="background-color: #3b3b3b;" class="game_post">
+
+			<a class="link" target="_blank" href="">
+				<img class="game_title" src="images/games/comingsoon_logo.png"/>
+			</a>
+			<a class="link" target="_blank" href="">
+				<img id="ren" class="game_image" style="border: 1px white solid;" src="images/games/comingsoon.png" onmouseover="chng(1, this, 'comingsoon')" onmouseout="chng(2, this, 'comingsoon')">
+				<!--<figcaption>Click image to visit.</figcaption>-->
+			</a>
+			<p class="image_caption">I'm making something. I might reveal some of it over time.</p>
+			<h5>Started: July 2025 </h5>
+		</div>
+
+		<div style="background-color: #001700;" class="game_post">
+
+			<a class="link" target="_blank" href="https://kryscw.itch.io/bit-city-uprising">
+				<img class="game_title" src="images/games/bitRev.png"/>
+			</a>
+			<a class="link" target="_blank" href="https://kryscw.itch.io/bit-city-uprising">
+				<img id="btc" class="game_image" style="border: 1px white solid;" src="images/games/bitcity.png" onmouseover="chng(1, this, 'bitcity')" onmouseout="chng(2, this, 'bitcity')">
+				<figcaption>Click image to visit.</figcaption>
+			</a>
+			<p class="image_caption">ULTRAKILL-inspired <strong>FPS Shooter</strong>. This game is on hiatus - though I do still plan to come back to it.</p>
+			<h5>Creation Date: June 14 2024</h5>
+		</div>
+
+		<div style="background-color: #040404;" class="game_post">
+
+			<a class="link" target="_blank" href="https://kryscw.itch.io/picturesque">
+				<img style="image-rendering: pixelated;" class="game_title" src="images/games/picturlogo.png"/>
+			</a>
+			<a class="link" target="_blank" href="https://kryscw.itch.io/picturesque">
+				<img class="game_image" style="border: 1px white solid;" src="images/games/picturesque.png" onmouseover="chng(1, this, 'picturesque')" onmouseout="chng(2, this, 'picturesque')"/> <figcaption>Click image to visit.</figcaption>
+			</a>
+			<p class="image_caption">Made for the <strong>Godot Wild Jam #72</strong>: a <strong>puzzle platformer</strong> where you can take photos to see through your foggy surroundings.</p>
+			<h5>Creation Date: August 18 2024</h5>
+		</div>
+
+		<div style="background-color: #29357A;" class="game_post">
+
+			<a class="link" target="_blank" href="https://kryscw.itch.io/icebreaker">
+				<img style="image-rendering: pixelated;" class="game_title" src="images/games/icebreaker_like_trees.png"/>
+			</a>
+			<a class="link" target="_blank" href="https://kryscw.itch.io/icebreaker">
+				<img class="game_image" style="border: 1px white solid;" src="images/games/icebreaker.png" onmouseover="chng(1, this, 'icebreaker')" onmouseout="chng(2, this, 'icebreaker')"/> <figcaption>Click image to visit.</figcaption>
+			</a>
+			<p class="image_caption">Made hastily for the <strong>Godot Wild Jam #76</strong>: an <strong>FPS</strong> game where you can freeze enemies and kick/punch them. </p>
+			<h5>Creation Date: December 23 2024</h5>
+		</div>
+
+		<div style="background-color: #020202;" class="game_post">
+			<a class="link" target="_blank" href="https://kryscw.itch.io/nightrider">
+				<img class="game_title" src="images/games/nightridre_logo.png"/>
+			</a>
+			<a class="link" target="_blank" href="https://kryscw.itch.io/nightrider">
+				<img class="game_image" style="border: 1px white solid;" src="images/games/nightrider.png" onmouseover="chng(1, this, 'nightrider')" onmouseout="chng(2, this, 'nightrider')"/> <figcaption>Click image to visit.</figcaption>
+			</a>
 			
+			<p class="image_caption">Mostly a test game, but you can play as a car and deliver packages.</p>
+
+			<h5>Creation Date: June 27 2024</h5>
 		</div>
 	</div>
+	<hr>
+	
+	<p/>
+	
+	<div id="credits" class="post">
+
+		<h1>Credits</h1>
+
+		<p class="center">The <strong>kryscw.com logo</strong> was made by <a target = "_blank" class="link" href="https://bsky.app/profile/cassetteology.bsky.social">Cassetteology.</a></p>
+
+		<p class="center">The <strong>Icebreaker</strong> title graphic was made by <a target = "_blank" class="link" href="https://bsky.app/profile/mash1.bsky.social">TSR/Mash.</a></p>
+	
+		<p class="center">Both are awesome friends of mine.</a>
+	</div>
+	
+	<p/><p/>
+
+	<script>
+		function chng(x, image, game)
+		{
+			if (x==1)
+			{
+				image.src = 'images/games/gifs/' + game + '.gif';
+			}
+			if (x==2)
+			{
+				image.src = 'images/games/' + game + '.png';
+			}
+		}
+	</script>
 
 </body>
 </html>

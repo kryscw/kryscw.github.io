@@ -1,4 +1,6 @@
-/* Page Basics */
+@font-face { font-family: DOS; src: url('fonts/DOS.ttf'); } 
+
+/* header, navbar, and li elements */
 
 #header {
   background-color: darkgreen;
@@ -6,7 +8,18 @@
   margin-left: 2%;
   margin-right: 2%;
   background-position-x: center;
-  background-image: url('images/site_bg.png');
+}
+
+.title_img {
+  opacity: 1;
+  width: 250px;
+  /*transition: width 0.3s;
+  transition-timing-function: ease;*/
+}
+
+.title_img:hover {
+  opacity: 0.9;
+  /*width: 275px;*/
 }
 
 .sticky_navbar {
@@ -39,9 +52,7 @@ li a {
   margin-right: 10px;
   margin-left: 10px;
   text-decoration: none;
-  font-family: 'Courier New';
-  transition: background-color 0.25s;
-  transition-timing-function: ease;
+  font-family: 'DOS';
 }
 
 .wrapper {
@@ -51,56 +62,59 @@ li a {
 }
 
 .selected {
-  background-color: #111111;
-}
-
-.selected:hover {
-  background-color: #111111;
+  background-color: black;
 }
 
 li a:hover {
- 
-  background-color: #111111;
-  transition: background-color 0.25s;
-  transition-timing-function: ease;
+  background-color: black;
 }
 
-h1, h2 {
+.linkbrowser {
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+
+/* headers */
+
+h1, h2, h3, strong {
   color: white;
 }
 
-h3, h2, h1 {
-  font-family: 'Trebuchet MS';
-}
-
-h3 {
-  color: grey;
+h3, h2, h1, h5 {
+  font-family: 'DOS';
 }
 
 h2 {
   font-size: 35px;
 }
 
-p {
-  color: white;
-  text-align: left;
-  font-size: 25px;
-
-  padding: 5px;
-  font-weight: normal;
-  font-family: 'Trebuchet MS', Verdana, sans-serif;
-}
-
 h5 {
   color: lightgrey;
   font-weight: normal;
-  font-family: 'Trebuchet MS', Verdana, sans-serif;
   align-items: flex-end;
 }
 
-.image_caption {
+/* paragraphs */
+
+p {
+  color: grey;
+  text-align: left;
+  font-size: 25px;
+  padding: 5px;
+  font-weight: normal;
+  font-family: 'DOS', Verdana, sans-serif;
+}
+
+/* project container */
+
+figcaption {
+	font-family: 'DOS', monospace;
+}
+
+.image_caption { /* desc of games */
   text-align: center;
-  font-family: 'Courier New', monospace;
+  font-family: 'DOS', monospace;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: auto;
@@ -108,80 +122,13 @@ h5 {
   font-size: 150%;
 }
 
-.flex {
+.flex { /* flex container for projs */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0 50px;
   height: 100%;
   justify-content: center;
-}
-
-body {
-  background-color: black;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.linkbrowser {
-  text-align: center;
-  background-color: #1a1a1a;
-  
-}
-
-#more {
-  display: none;
-}
-
-/* Images */
-
-.title_img {
-  opacity: 1;
-  width: 200px;
-  transition: width 0.3s;
-  transition-timing-function: ease;
-}
-
-.page_title_img {
-  opacity: 1;
-  width: 200px;
-  transition: opacity 0.3s;
-  transition-timing-function: ease;
-}
-
-.title_img:hover {
-  opacity: 0.9;
-  width: 225px;
-}
-
-.page_title_img:hover {
-  opacity: 0.4;
-}
-
-
-
-/* Specifics */
-
-.social {
-  /animation: 0.5s initialize;
-  width: 100px;
-  padding: 20px;
-  transition: opacity 0.3s;
-  transition-timing-function: ease;
-}
-
-.social:hover {
-  opacity: 0.4;
-}
-
-.link {
-  text-decoration: none;
-  outline-color: transparent;
-  color: lightblue;
-}
-
-.link:visited {
-  color: lightblue;
 }
 
 .game_image {
@@ -200,124 +147,93 @@ body {
   margin-bottom: 5px;
 }
 
-.post {
-  animation: 0.5s initialize;
-  background-color: #1a1a1a;
-  border: 3px solid #1a1a1a;
-  margin:auto;
-  text-align: center;
-  width: 80%;
-  
-  transition: background-color 0.3s;
-  transition-timing-function: ease;
-}
-
 .game_post {
   animation: 0.5s initialize;
-  align-self: stretch;
+  
   text-align: center;
-  display: flex;
+  
   flex-direction: column;
-  width: 50vh;
-  margin: 30px;
-  scale: 100%;
-  border-radius: 25px;
+  width: 30vh;
+  margin: 10px;
   border: 1px solid transparent;
 }
 
 .game_post:hover {
-  /*position: relative;
-  top: -5px;*/
-  scale: 105%;
-  border: 1px solid #d0d0d0;
-  transition: scale 0.2s;
-  transition-timing-function: ease;
+  border: 1px solid white;
+}
+
+/* body and scanlines */
+
+body {
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body:before {
+	content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 80%,
+        rgba(0, 0, 0, 0.15) 80%
+    );
+    background-size: 100% 8px;
+    z-index: 9999;
+    pointer-events: none;
+	animation: scanlines infinite 5s linear;
+	
+}
+
+@keyframes scanlines {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -10px;
+  }
+}
+
+
+/* posts */
+
+.link {
+  text-decoration: none;
+  outline-color: transparent;
+  color: lightblue;
+}
+
+.link:visited {
+  color: lightblue;
+}
+
+.post {
+  animation: 0.5s initialize;
+  background-color: black;
+  border: 1px solid #1a1a1a;
+  margin:auto;
+  text-align: center;
+  width: 80%;
 }
 
 .post:hover {
-  background-color: #0d0d0d;
-  border: 3px solid #0d0d0d;
+  background-color: black;
+  border: 1px solid white;
 }
-
-/*@keyframes initialize {
-  0% {
-    transform: translateY(10%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-*/
 
 .center {
   text-align: center;
 }
 
-/* Terminal */
-
-.terminal {
-  animation: 0.5s initialize;
-  background: black;
-  border: 1px white solid;
-  width: 100%;
-  border-radius: 5px;
-  padding: 12px 0 0 0;
-  font-family: 'Courier New', monospace;
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+html {
+  scroll-behavior: smooth;
 }
 
-.terminal p {
-  font-family: 'Courier New', monospace;
-  padding: 5px 0 0 0;
-  margin-top: -10px;
-}
-
-.userEnteredText{
-  color: rgb(255, 255, 255, 0.5);
-  padding: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  display: inline-block;
-}
-
-#terminalResults {
-  width: 100%;
-  height: 400px;
-  padding: 12px;
-  
-  overflow-y: auto;
-  resize: none;
-  border: none;
-  line-height: 18px;
-  font-size: 25px;
-  display: block;
-  color: rgb(255, 255, 255, 0.9);
-}
-
-#terminalResults a{
-  color: rgb(255, 255, 255, 0.9);
-  text-decoration: underline;
-}
-
-#terminalTextInput {
-  background: black;
-  display: block;
-  border: none;
-  border-radius: 0 0 4px 4px;
-  width: 96%;
-  color: white;
-  padding: 18px;
-  font-size: 25px;
-  outline: none;
-  font-family: 'Courier New', monospace;
-}
-
-@media screen and (max-width: 1000px) {
-  #terminalResults {
-    height: 100px;
-  }
+hr {
+	width: 50%;
 }
