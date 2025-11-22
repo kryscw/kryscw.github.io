@@ -47,7 +47,7 @@ li {
 li a {
   color: white;
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
   padding:3px;
   margin-right: 10px;
   margin-left: 10px;
@@ -85,8 +85,14 @@ h3, h2, h1, h5 {
   font-family: 'DOS';
 }
 
+h1 {
+	font-size: 25px;
+}
+h3 {
+	font-size: 15px;
+}
 h2 {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 h5 {
@@ -100,7 +106,7 @@ h5 {
 p {
   color: grey;
   text-align: left;
-  font-size: 25px;
+  font-size: 15px;
   padding: 5px;
   font-weight: normal;
   font-family: 'DOS', Verdana, sans-serif;
@@ -119,7 +125,7 @@ figcaption {
   margin-right: 5%;
   margin-bottom: auto;
   margin-top: auto;
-  font-size: 150%;
+  font-size: 130%;
 }
 
 .flex { /* flex container for projs */
