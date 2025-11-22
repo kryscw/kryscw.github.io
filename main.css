@@ -4,9 +4,6 @@
 
 #header {
   background-color: darkgreen;
-  margin-bottom: 20px;
-  margin-left: 2%;
-  margin-right: 2%;
   background-position-x: center;
 }
 
@@ -24,17 +21,13 @@
 
 .sticky_navbar {
   position: sticky;
-  overflow: hidden;
   top: 0;
-  margin-bottom: 25px;
-  margin-left: 2%;
-  margin-right: 2%;
   background-color: black;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin-top: 5px;
   padding: 0;
   overflow: hidden;
   background-color: #333333;
@@ -47,10 +40,8 @@ li {
 li a {
   color: white;
   text-align: center;
-  font-size: 15px;
-  padding:3px;
-  margin-right: 10px;
-  margin-left: 10px;
+  font-size: 16px;
+  padding:2%;
   text-decoration: none;
   font-family: 'DOS';
 }
@@ -125,6 +116,7 @@ figcaption {
   margin-right: 5%;
   margin-bottom: auto;
   margin-top: auto;
+  line-height: 35px;
   font-size: 130%;
 }
 
@@ -154,8 +146,6 @@ figcaption {
 }
 
 .game_post {
-  animation: 0.5s initialize;
-  
   text-align: center;
   
   flex-direction: column;
@@ -172,8 +162,7 @@ figcaption {
 
 body {
   background-color: black;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0;
 }
 
 body:before {
@@ -218,28 +207,21 @@ body:before {
   color: lightblue;
 }
 
+.link:hover {
+	color: white;
+}
+
 .post {
-  animation: 0.5s initialize;
   background-color: black;
   border: 1px solid #1a1a1a;
   margin:auto;
   text-align: center;
   width: 80%;
 }
-
-.post:hover {
-  background-color: black;
-  border: 1px solid white;
-}
-
 .center {
   text-align: center;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-hr {
-	width: 50%;
 }
