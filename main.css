@@ -5,16 +5,14 @@
 #header {
   background-color: darkgreen;
   margin-bottom: 20px;
-  margin-left: 2%;
-  margin-right: 2%;
   background-position-x: center;
 }
 
 .title_img {
   opacity: 1;
   width: 250px;
-  /*transition: width 0.3s;
-  transition-timing-function: ease;*/
+  transition: width 0.3s;
+  transition-timing-function: ease;
 }
 
 .title_img:hover {
@@ -27,9 +25,8 @@
   overflow: hidden;
   top: 0;
   margin-bottom: 25px;
-  margin-left: 2%;
-  margin-right: 2%;
   background-color: black;
+  z-index: 99;
 }
 
 ul {
@@ -47,7 +44,7 @@ li {
 li a {
   color: white;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   padding:3px;
   margin-right: 10px;
   margin-left: 10px;
@@ -77,8 +74,18 @@ li a:hover {
 
 /* headers */
 
-h1, h2, h3, strong {
+h1, h2, strong {
   color: white;
+}
+
+h3 {
+  text-align: center;
+  color: grey;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 30px;
 }
 
 h3, h2, h1, h5 {
@@ -92,7 +99,6 @@ h2 {
 h5 {
   color: lightgrey;
   font-weight: normal;
-  align-items: flex-end;
 }
 
 /* paragraphs */
@@ -100,7 +106,7 @@ h5 {
 p {
   color: grey;
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   padding: 5px;
   font-weight: normal;
   font-family: 'DOS', Verdana, sans-serif;
@@ -110,6 +116,7 @@ p {
 
 figcaption {
 	font-family: 'DOS', monospace;
+  font-size: small;
 }
 
 .image_caption { /* desc of games */
@@ -119,17 +126,39 @@ figcaption {
   margin-right: 5%;
   margin-bottom: auto;
   margin-top: auto;
-  font-size: 150%;
+  font-size: 120%;
 }
 
-.flex { /* flex container for projs */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+.grid { /* grid container for projs */
+  display: grid;
+  grid-template-columns: auto auto auto;
   padding: 0 50px;
   height: 100%;
   justify-content: center;
 }
+
+.gridCassette {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  overflow: auto;
+}
+
+input {
+  padding: 25px;
+}
+
+.animate {
+  animation: startTape .25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes startTape {
+  0% {scale: 1;}
+  100% {scale: .90;}
+  }
 
 .game_image {
   object-fit: cover;
@@ -148,12 +177,12 @@ figcaption {
 }
 
 .game_post {
-  animation: 0.5s initialize;
   
   text-align: center;
-  
-  flex-direction: column;
-  width: 30vh;
+
+  overflow: hidden;
+
+  width: 25vw;
   margin: 10px;
   border: 1px solid transparent;
 }
@@ -166,8 +195,6 @@ figcaption {
 
 body {
   background-color: black;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 body:before {
@@ -195,7 +222,7 @@ body:before {
     background-position: 0 0;
   }
   to {
-    background-position: 0 -10px;
+    background-position: 0 -50px;
   }
 }
 
@@ -213,7 +240,6 @@ body:before {
 }
 
 .post {
-  animation: 0.5s initialize;
   background-color: black;
   border: 1px solid #1a1a1a;
   margin:auto;
