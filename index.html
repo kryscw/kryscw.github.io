@@ -114,15 +114,14 @@
 			<h5>Creation Date: June 27 2024</h5>
 		</div>
 	</div>
-	<!--
-	<br/><br/>
 
+	<br/><br/>
+	<!--
 	<div class="post">
 		<h1>Music Showcase</h1>
 	</div>
 
 	<br/>
-
 	<h3>(Warning: may be loud!)</h3>
 	<h3>Click each cassette to toggle playing.</h3>
 
@@ -142,14 +141,13 @@
 
 	</div>
 	-->
-
 	<br/><br/>
 	
 	<div id="credits" class="post">
 
 		<h1>Credits</h1>
 
-		<p class="center">The <strong>kryscw.com logo</strong> and the <strong>cassette graphics</strong> was made by <a target = "_blank" class="link" href="https://bsky.app/profile/cassetteology.bsky.social">Cassetteology.</a></p>
+		<p class="center">The <strong>kryscw.com logo</strong> and the <strong>cassette graphics</strong> were made by <a target = "_blank" class="link" href="https://bsky.app/profile/cassetteology.bsky.social">Cassetteology.</a></p>
 
 		<p class="center">The <strong>Icebreaker</strong> title graphic was made by <a target = "_blank" class="link" href="https://bsky.app/profile/mash1.bsky.social">TSR/Mash.</a></p>
 	
@@ -160,6 +158,10 @@
 
 	<script>
 
+		cassetteActive = null;
+
+		const stopEvent = new Event("stop");
+
 		const buttons = document.getElementsByClassName('CassetteButton');
 
 		const audioPlayers = document.getElementsByClassName('CassetteAudio');
@@ -168,14 +170,27 @@
 			let rand = Math.random() * (360);
 			buttons[i].style.filter = "hue-rotate(" + rand + "deg)";
 
+			buttons[i].addEventListener('stop', (e) => {
+				cassetteActive = null;
+				console.log(cassetteActive);
+				buttons[i].classList.remove("animate");
+				audioPlayers[i].pause();
+			})
+
 			buttons[i].addEventListener('click', (e) => {
 				if (audioPlayers[i].paused) {
+					if (cassetteActive != null) {
+						cassetteActive.dispatchEvent(stopEvent);
+					}
 					audioPlayers[i].currentTime = 0;
 					audioPlayers[i].play()
+					cassetteActive = buttons[i];
+					console.log(cassetteActive);
 					buttons[i].classList.add("animate");
 				} else {
-					buttons[i].classList.remove("animate");
-					audioPlayers[i].pause();
+					if (cassetteActive === buttons[i]) {
+						buttons[i].dispatchEvent(stopEvent);
+					}
 				}
 			})
 		}
