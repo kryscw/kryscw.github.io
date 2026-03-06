@@ -29,8 +29,8 @@
 
 	<!-- PAGE DATA BELOW -->
 
-	<h3>KRYS-DOS v1.0.6</h3>
-	<h3>Last Updated: March 4 2026</h3>
+	<h3>KRYS-DOS v1.0.7 "Cassette Update"</h3>
+	<h3>Last Updated: March 5 2026</h3>
 
 	<div id="skills" class="post">
 
@@ -50,7 +50,7 @@
 		<h3>Programs</h3>
 		<p class="center">Blender, FL Studio, Godot</p>
 		<h3>Languages</h3>
-		<p class="center">GDScript, Java, JS/TS, HTML & CSS</p>
+		<p class="center">GDScript, Basic Java, Basic JS/TS, HTML & CSS</p>
 
 	</div>
 
@@ -60,10 +60,26 @@
 	<h1>Projects</h1>
 	</div>
 
+	<br/>
+	<br/>
+
+	<div class="grid-row">
+
+		<div style="background-color: #001700;" class="game_post_row">
+			<a class="link" target="_blank" href="bitrevolution">
+			<img class="game_title_row" src="images/games/bitRev.png"/>
+			<p class="image_caption">ULTRAKILL-inspired <strong>FPS Shooter</strong> game.</p>
+			<h5>Creation Date: June 14 2024</h5>
+			</a>
+		</div>
+
+	</div>
+
+	<br/><br/>
 	
 	
 	<div class="grid">
-
+		<!--
 		<div style="background-color: #001700;" class="game_post">
 
 			<a class="link" target="_blank" href="https://kryscw.itch.io/bit-city-uprising">
@@ -76,6 +92,7 @@
 			<p class="image_caption">ULTRAKILL-inspired <strong>FPS Shooter</strong>. This game is on hiatus - though I do still plan to come back to it.</p>
 			<h5>Creation Date: June 14 2024</h5>
 		</div>
+		-->
 
 		<div style="background-color: #040404;" class="game_post">
 
@@ -116,31 +133,34 @@
 	</div>
 
 	<br/><br/>
-	<!--
+
 	<div class="post">
 		<h1>Music Showcase</h1>
 	</div>
 
 	<br/>
-	<h3>(Warning: may be loud!)</h3>
+	<h3>(Warning: Some may be loud!)</h3>
 	<h3>Click each cassette to toggle playing.</h3>
+	<h3>Adjust volume with the slider below.</h3>
+
+	<input class="CassetteVolSlider" onchange="h(value)" type="range" value="500"/>
 
 	<div class="gridCassette">
 
-			<input class="CassetteButton" type="image" src="images/placeholdercassette.jpg"/>
+			<input class="CassetteButton" type="image" src="images/cassettes/cassetteCritter.png"/>
 			<audio class="CassetteAudio" src="audio/TestInBetaAlpha.ogg" loop preload="auto"></audio>
 
-			<input class="CassetteButton" type="image" src="images/placeholdercassette.jpg"/>
+			<input class="CassetteButton" type="image" src="images/cassettes/cassetteBitRev.png"/>
 			<audio class="CassetteAudio" src="audio/bit_city.mp3" loop preload="auto"></audio>
 
-			<input class="CassetteButton" type="image" src="images/placeholdercassette.jpg"/>
+			<input class="CassetteButton" type="image" src="images/cassettes/cassetteInnsbruck.png"/>
 			<audio class="CassetteAudio" src="audio/Innsbruck.ogg" loop preload="auto"></audio>
 
-			<input class="CassetteButton" type="image" src="images/placeholdercassette.jpg"/>
+			<input class="CassetteButton" type="image" src="images/cassettes/cassetteJungle.png"/>
 			<audio class="CassetteAudio" src="audio/jungle.mp3" loop preload="auto"></audio>
 
 	</div>
-	-->
+
 	<br/><br/>
 	
 	<div id="credits" class="post">
@@ -166,9 +186,25 @@
 
 		const audioPlayers = document.getElementsByClassName('CassetteAudio');
 
+		const volSlider = document.getElementsByClassName('CassetteVolSlider');
+
+		function map(val, sStart, sEnd, tStart, tEnd) {
+			return (val - sStart) / (sEnd - sStart) * (tEnd - tStart) + tStart;
+		}
+
+		function h(value) {
+			for (let i = 0; i < audioPlayers.length; i++) {
+				audioPlayers[i].volume = map(value, 1, 100, 0, 1);
+			}
+		}
+
+		for (let i = 0; i < audioPlayers.length; i++) {
+			audioPlayers[i].volume = 0.25;
+			volSlider.value = 25;
+		}
+
 		for (let i = 0; i < buttons.length; i++) {
 			let rand = Math.random() * (360);
-			buttons[i].style.filter = "hue-rotate(" + rand + "deg)";
 
 			buttons[i].addEventListener('stop', (e) => {
 				cassetteActive = null;
