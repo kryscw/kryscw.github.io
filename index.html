@@ -29,8 +29,8 @@
 
 	<!-- PAGE DATA BELOW -->
 
-	<h3>KRYS-DOS v1.0.7 "Cassette Update"</h3>
-	<h3>Last Updated: March 5 2026</h3>
+	<h3>KRYS-DOS v1.0.8</h3>
+	<h3>Last Updated: March 6 2026</h3>
 
 	<div id="skills" class="post">
 
@@ -141,9 +141,6 @@
 	<br/>
 	<h3>(Warning: Some may be loud!)</h3>
 	<h3>Click each cassette to toggle playing.</h3>
-	<h3>Adjust volume with the slider below.</h3>
-
-	<input class="CassetteVolSlider" onchange="h(value)" type="range" value="500"/>
 
 	<div class="gridCassette">
 
@@ -186,21 +183,8 @@
 
 		const audioPlayers = document.getElementsByClassName('CassetteAudio');
 
-		const volSlider = document.getElementsByClassName('CassetteVolSlider');
-
-		function map(val, sStart, sEnd, tStart, tEnd) {
-			return (val - sStart) / (sEnd - sStart) * (tEnd - tStart) + tStart;
-		}
-
-		function h(value) {
-			for (let i = 0; i < audioPlayers.length; i++) {
-				audioPlayers[i].volume = map(value, 1, 100, 0, 1);
-			}
-		}
-
 		for (let i = 0; i < audioPlayers.length; i++) {
 			audioPlayers[i].volume = 0.25;
-			volSlider.value = 25;
 		}
 
 		for (let i = 0; i < buttons.length; i++) {

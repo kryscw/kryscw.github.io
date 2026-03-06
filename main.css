@@ -151,6 +151,7 @@ figcaption {
 .grid { /* grid container for projs */
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
   padding: 0 50px;
   height: 100%;
   justify-content: center;
@@ -187,20 +188,22 @@ figcaption {
 }
 
 .gridCassette {
+  --w: 800px; /* control when the items will wrap */
+
   display: grid;
-  grid-template-columns: auto auto;
-  padding: 0 50px;
+  grid-template-columns:
+    repeat(auto-fill,
+    minmax(clamp(100%/3 + 0.1%,(var(--w) - 100%)*1000,100%/2 + 0.1%),1fr));
+
+  text-align: center;
   height: 100%;
   justify-content: center;
-  overflow: auto;
 }
 
 input {
-  padding: 25px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin : 0 auto;
-  display:block;
+  width: 40vh;
+  margin: 0 auto;
+  display: block;
 }
 
 .animate {
@@ -236,6 +239,7 @@ input {
   overflow: hidden;
 
   width: 25vw;
+  height: auto;
   margin: 10px;
   border: 1px solid transparent;
 }
