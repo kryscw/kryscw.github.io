@@ -93,7 +93,7 @@
             <h1>[Projects]</h1>
 
             <div class="grid-row">
-                <a class="link" target="_blank" href="bitrevolution">
+                <a class="link" href="bitrevolution">
                 <div style="background-color: #001700" class="game_post_row">
                         <img
                             class="game_title_row"
@@ -383,6 +383,23 @@
                 OSName = navigator.platform;
 
                 if (
+                  OSName.indexOf("Mac") != -1
+                )
+                    OSName = "MacOS";
+                if (
+                  OSName.indexOf("Win") != -1
+                )
+                    OSName = "Windows";
+                if (
+                  OSName.indexOf("Linux") != -1
+                )
+                    OSName = "Linux";
+                if (
+                  OSName.indexOf("iPhone") != -1
+                )
+                    OSName = "iOS";
+
+                if (
                     us.indexOf("Firefox/") != -1 &&
                     us.indexOf("Seamonkey/") == -1
                 )
@@ -390,7 +407,8 @@
                 if (us.indexOf("Seamonkey/") != -1) browserName = "Seamonkey";
                 if (
                     us.indexOf("Chrome/") != -1 &&
-                    us.indexOf("Chromium/") == -1
+                    us.indexOf("Chromium/") == -1 &&
+                    us.indexOf("Edg/") == -1
                 )
                     browserName = "Google Chrome";
                 if (us.indexOf("Chromium/") != -1) browserName = "Chromium";
@@ -402,7 +420,7 @@
                     browserName = "Safari";
                 if (us.indexOf("Opera/") != -1 || us.indexOf("OPR/") != -1)
                     browserName = "Opera";
-                if (us.indexOf("Edge/") != -1) browserName = "Microsoft Edge";
+                if (us.indexOf("Edg/") != -1) browserName = "Microsoft Edge";
 
                 document.getElementById("OSText").innerHTML =
                     "Greetings, " + browserName + " on " + OSName + "!";
