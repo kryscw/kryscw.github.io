@@ -107,6 +107,7 @@ p a {
     color: lightblue;
 }
 
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -141,7 +142,8 @@ strong {
     text-align: center;
 }
 
-h3 {
+h3,
+img + em {
     text-align: center;
     color: grey;
     font-size: 1rem;
@@ -186,6 +188,7 @@ p {
 
 #jekyllpost p {
     color: white;
+    text-align: left;
 }
 
 #warning {
