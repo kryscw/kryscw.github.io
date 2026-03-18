@@ -1,0 +1,77 @@
+---
+---
+<!doctype html>
+<html>
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=0.75"
+        />
+        <link type="text/css" rel="stylesheet" href="/main.css?version=1.1.0" />
+        <title>kryscw: {{ page.title }}</title>
+        <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
+        <meta name="description" content="im a game dev" />
+    </head>
+
+    <body>
+        <!-- LINK BROWSER -->
+        <div class="sticky_navbar">
+            <header
+            >
+                <a href="/"
+                    ><div class="wrapper">
+                        <img
+                            src="/images/krys_logo.png"
+                            class="title_img"
+                        /></div
+                ></a>
+                <div class="linkbrowser">
+                    <ul class="linkbar">
+                        <li>
+                            <a
+                                target="_blank"
+                                href="https://www.youtube.com/@kryscw"
+                                >YouTube</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/blog">
+                                Blog</a
+                            >
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://kryscw.itch.io/"
+                                >Itch</a
+                            >
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/kryscw"
+                                >GitHub</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+
+        <!-- PAGE DATA BELOW -->
+
+        <br/><br/>
+
+        <div class="post" id="jekyllpost">
+            <h1> {{ page.title }} </h1>
+        	<h3>{{ page.description }}</h3>
+        	<h3>{{ page.date | date: "%-d %B %Y" }}</h3>
+        	<br/>
+            <p class="jekyllPostText">
+                {{ content }}
+            </p>
+
+            <br />
+        </div>
+
+        <br /><br />
+        <br /><br />
+    </body>
+</html>
