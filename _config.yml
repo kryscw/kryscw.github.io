@@ -28,7 +28,7 @@ url: "https://kryscw.github.io" # the base hostname & protocol for your site, e.
 github_username:  kryscw
 
 # Build settings
-theme: kryscw
+# theme: kryscw
 plugins:
   - jekyll-feed
 
