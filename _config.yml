@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-plugins:
-  - jekyll-remote-theme
+#plugins:
+#  - jekyll-remote-theme
 
 title: kryscw
 email: your-email@example.com
@@ -31,7 +31,7 @@ url: "https://kryscw.github.io" # the base hostname & protocol for your site, e.
 github_username:  kryscw
 
 # Build settings
-remote-theme: kryscw/kryscw-jekyll-theme
+# remote-theme: kryscw/kryscw-jekyll-theme
 plugins:
   - jekyll-feed
 
