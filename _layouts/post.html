@@ -1,5 +1,4 @@
 ---
-comments: true
 ---
 <!doctype html>
 <html>
@@ -72,11 +71,14 @@ comments: true
             <br />
         </div>
 
-        {% if page.comments %}
-            <div id="disqus_thread"></div>
+
+        
+            <br />
+            <br />
+            <div id="disqus_thread" style="margin-left: 10%; margin-right: 10%;"></div>
             <script>
                 var disqus_config = function () {
-                    //this.page.url = "https://kryscw.github.io";
+                    this.page.url = "https://kryscw.github.io{{ page.url }}";
                     this.page.identifier = '{{ page.url | absolute_url }}';
                 };
                 
@@ -88,7 +90,7 @@ comments: true
                 })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% endif %}
+        
 
         <br /><br />
         <br /><br />
