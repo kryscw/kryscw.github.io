@@ -49,6 +49,12 @@ header {
     background-image: url("images/sitebg.png");
 }
 
+.giscus {
+    display: flex;
+    margin: auto;
+    max-width: 70%; /* Adjust as needed */
+}
+
 .title_img {
     opacity: 1;
     width: 250px;
