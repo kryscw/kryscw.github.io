@@ -3,7 +3,6 @@ layout: post
 title:  "Making a Home Server"
 description: "Making my own rudimentary Linux server at home"
 date:   2026-03-18
-categories: linux
 ---
 
 Recently, I've been delving into Linux as a hobby - it's fun to customize your system *(I've also found Arch Linux to be fun, but I don't trust myself enough for it)*, and I've even switched to Fedora on my home computer.
@@ -23,6 +22,16 @@ Being able to SSH in remotely while I'm at university has been fun and I learned
 ![motd](/images/posts/31826.png){: width="100%" }
 
 <h3>My custom MOTD header for the server</h3>
+
+At the time, I was also fixated on restoring my family's old MacBooks from 2005 and 2007 respectively (one not working sadly). Seeing as I already had a perfectly working server set up with a free SATA slot, I managed to restore all of our data off of the drives!
+
+And for the curious nerds like me, this is what the internals of a 2005 Macbook looks like.
+
+![macbook](/images/posts/IMG_4097.jpg){: width="100%" }
+
+<h3>The hard drive is on the bottom right! Look at how small it is!</h3>
+
+Maybe I'll do a blog post in the future about all the old Apple products I have, but that's all for today. See you next time...
 
 [ts]:   https://tailscale.com/
 [mt]:   https://motion-project.github.io/
