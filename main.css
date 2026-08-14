@@ -24,15 +24,6 @@
     }
 }
 
-@keyframes scanlines {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 0 -50px;
-    }
-}
-
 /* header, navbar, and li elements */
 
 body {
@@ -43,6 +34,7 @@ body {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    background-color: #000000;
 }
 
 header {
@@ -111,6 +103,13 @@ li a {
 
 p a {
     color: lightblue;
+}
+
+img.centered {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -331,28 +330,6 @@ input:hover {
 
 /* body and scanlines */
 
-body {
-    background-color: black;
-}
-
-body:before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(18, 16, 16, 0) 80%,
-        rgba(0, 0, 0, 0.15) 80%
-    );
-    background-size: 100% 8px;
-    z-index: 9999;
-    pointer-events: none;
-    animation: scanlines infinite 5s linear;
-}
 
 /* posts */
 
